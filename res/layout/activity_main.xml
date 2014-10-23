@@ -5,21 +5,51 @@
     tools:context="${relativePackage}.${activityClass}" >
 
     <Button
-        android:id="@+id/buttonLogin"
-        android:layout_width="match_parent"
+        android:id="@+id/instantLoginButton"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onLoginButtonClick"
-        android:text="login" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:onClick="onInstantLoginButtonClick"
+        android:text="Play Now" />
 
     <Button
-        android:id="@+id/buttonLogout"
-        android:layout_width="match_parent"
+        android:id="@+id/fbLoginButton"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/buttonLogin"
-        android:onClick="onLogoutButtonClick"
-        android:text="logout" />
+        android:layout_below="@+id/instantLoginButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:onClick="onFacebookLoginButtonClick"
+        android:text="FB Login" />
 
+    <TextView
+        android:id="@+id/textViewMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fbLoginButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp"
+        android:text="" />
 
-  
+    <Button
+        android:id="@+id/fbLogoutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textViewMessage"
+        android:layout_alignLeft="@+id/fbLoginButton"
+        android:onClick="onFacebookLogoutButtonClick"
+        android:text="FB Logout" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="88dp"
+        android:text="Demo"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
 </RelativeLayout>
